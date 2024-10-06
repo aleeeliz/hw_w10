@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "% of People who wear SPF30+ by Gender ",
+  "title": "% of People who wear SPF30+ by Gender and Age",
   "width": 400,
   "height": 400,
   "data": {
