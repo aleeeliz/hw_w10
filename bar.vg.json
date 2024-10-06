@@ -26,9 +26,9 @@
     "x": {"field": "age", "type": "nominal", "title": "Age group"},
     "y": {"field": "spf", "type": "quantitative", "title": "% of people"},
     "tooltip": [
-      {"field": "age", "type": "nominal", "title": "Age:"},
-      {"field": "gender", "type": "nominal", "title": "Gender:"},
-      {"field": "spf", "type": "quantitative", "title": "% of people:"}
+      {"field": "age", "type": "nominal", "title": "Age"},
+      {"field": "gender", "type": "nominal", "title": "Gender"},
+      {"field": "spf", "type": "quantitative", "title": "% of people"}
     ]
   },
   "config": {}
