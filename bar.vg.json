@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "% of People who wear SPF30+ by Gender ",
+  "width": 400,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/aleeeliz/hw_w10/refs/heads/main/data3.csv"
+  },
+  "params": [
+    {
+      "name": "gender_select",
+      "bind": {
+        "input": "select",
+        "options": ["M", "F"],
+        "labels": ["Male", "Female"],
+        "name": "Gender Selection:"
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.spf > 0"},
+    {"filter": "gender_select == null || datum.gender == gender_select"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "age", "type": "nominal", "title": "Age group"},
+    "y": {"field": "spf", "type": "quantitative", "title": "% of people"},
+    "tooltip": [
+      {"field": "age", "type": "nominal", "title": "Age:"},
+      {"field": "gender", "type": "nominal", "title": "Gender:"},
+      {"field": "spf", "type": "quantitative", "title": "% of people:"}
+    ]
+  },
+  "config": {}
+}
